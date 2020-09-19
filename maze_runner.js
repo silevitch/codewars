@@ -1,27 +1,18 @@
 // https://www.codewars.com/kata/58663693b359c4a6560001d6/train/javascript
 
 function mazeRunner(maze, directions) {
-  var size = maze[0].length;
-  
   var start = [];
-  var end = [];
 
   main:
-    for ( var i = 0; i < size; i++ ){
-      for ( var j = 0; j < size; j++ ) {   
-        if ( start[0] == undefined && maze[i][j] == '2'){
+    for ( var i = 0; i < maze.length; i++ ){
+      for ( var j = 0; j < maze.length; j++ ) {   
+        if ( maze[i][j] == '2'){
           start = [i, j];
-        }
-        
-        if ( end[0] == undefined && maze[i][j] == '3'){
-          end = [i, j];
-        }
-        
-        if ( start[0] != undefined && end[0] != undefined ){
+          
           break main;
         }
+      }
     }
-  }
   
   var current = start;
 
