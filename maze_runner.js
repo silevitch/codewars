@@ -34,10 +34,10 @@ function mazeRunner(maze, directions) {
 
     var spot = maze[ current[0] ][ current[1] ];
     
-    if ( spot == 1 ){
+    if ( spot == '1' ){
       return 'Dead';
     }
-    else if ( spot == 3 ){
+    else if ( spot == '3' ){
       return 'Finish';
     }
   }
